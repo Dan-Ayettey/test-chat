@@ -8,6 +8,7 @@ import {Messages} from "../screens/Messages";
 import {Contacts} from "../screens/Contacts";
 import {Chats} from "../screens/Chats";
 
+//Route component
 export const Routes = () => (
     <Router >
 
