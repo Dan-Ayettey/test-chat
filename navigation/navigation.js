@@ -3,7 +3,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import {Action} from 'react-router-flux';
 import { AntDesign } from '@expo/vector-icons';
+
 //import Test from '../Test';
 import Contacts from '../screens/Contacts';
 import Test2 from '../Test2';
@@ -13,6 +15,7 @@ const Stack = createStackNavigator();
 export default function Nav() {
   return (
     <NavigationContainer>
+
       <Stack.Navigator initialRouteName="Contacts">
         <Stack.Screen
           name="Contacts"
