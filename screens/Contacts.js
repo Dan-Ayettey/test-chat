@@ -1,4 +1,6 @@
 import React from 'react';
+import {Actions} from "react-native-router-flux";
+
 import {
   SafeAreaView,
   View,
@@ -71,8 +73,14 @@ DATA.sort(function (a, b) {
 });
 console.log(DATA);
 
-const Item = ({ user, msg, img, type }) => (
-  <TouchableOpacity activeOpacity={0.7} style={styles.item}>
+const Item = ({ user, msg, img, type }) =>{
+  const goToHome = () => {
+    Actions.Messages()
+  }
+
+  return (
+
+  <TouchableOpacity activeOpacity={0.7} style={styles.item} onPress={goToHome}>
     <View style={styles.imgContainer}>
       <Image source={img} />
     </View>
@@ -85,9 +93,10 @@ const Item = ({ user, msg, img, type }) => (
       <Text style={styles.title}>{type}</Text>
     </View>
   </TouchableOpacity>
-);
+)};
 
-export default function Contacts() {
+export  function Contacts() {
+
   const renderItem = ({ item }) => (
     <Item user={item.user} msg={item.msg} img={item.img} type={item.type} />
   );

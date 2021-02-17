@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import {Routes} from "./navigation/Router";
-import {SafeAreaView,StatusBar} from "react-native";
 
-
-export default class App extends Component {
-  render() {
+export default function App() {
 
     return (
 
     <Routes />
 
     )
-  }
+
 }
