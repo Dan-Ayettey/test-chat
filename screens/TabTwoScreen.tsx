@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View,Text } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
+
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { FontAwesome } from "@expo/vector-icons";
 
@@ -11,8 +10,7 @@ export default function TabTwoScreen() {
     <View style={styles.container}>
       <Text style={styles.title}>Tab Two</Text>
       <FontAwesome name={'user'}/>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
+
     </View>
   );
 }

@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de6e8c88-4187-494b-81b7-812c11552d2a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/adaptive-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/splash.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clientRDM/Chat.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clientRDM/Message.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clientRDM/Patient.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mediators/ChatRoom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mediators/User.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navigation/Router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/Chats.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/Contacts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/Messages.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/Model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/EditScreenInfo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/StyledText.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Themed.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/__tests__/StyledText-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/BottomTabNavigator.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/LinkingConfiguration.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/TabTwoScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/screens/TabTwoScreen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="de6e8c88-4187-494b-81b7-812c11552d2a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,26 +81,26 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="498" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613689472336">
+    <state x="498" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613724448648">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="498" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1613689472336" />
-    <state width="1476" height="207" key="GridCell.Tab.0.bottom" timestamp="1613701618061">
+    <state x="498" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1613724448648" />
+    <state width="1491" height="207" key="GridCell.Tab.0.bottom" timestamp="1613735135160">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1476" height="207" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613701618061" />
-    <state width="1476" height="207" key="GridCell.Tab.0.center" timestamp="1613701618061">
+    <state width="1491" height="207" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613735135160" />
+    <state width="1491" height="207" key="GridCell.Tab.0.center" timestamp="1613735135159">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1476" height="207" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613701618061" />
-    <state width="1476" height="207" key="GridCell.Tab.0.left" timestamp="1613701618061">
+    <state width="1491" height="207" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613735135159" />
+    <state width="1491" height="207" key="GridCell.Tab.0.left" timestamp="1613735135159">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1476" height="207" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613701618061" />
-    <state width="1476" height="207" key="GridCell.Tab.0.right" timestamp="1613701618061">
+    <state width="1491" height="207" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613735135159" />
+    <state width="1491" height="207" key="GridCell.Tab.0.right" timestamp="1613735135160">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1476" height="207" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613701618061" />
+    <state width="1491" height="207" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613735135160" />
     <state x="425" y="189" key="run.anything.popup" timestamp="1613686772746">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -19,33 +19,23 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 import {User} from "../mediators/User";
 
 
-function Message () {
-                return( <View  style={{flexDirection:'row',alignSelf:'flex-end'}}>
 
-                    <View  style={{width:'auto',flexDirection:'row',alignItems:'flex-start',marginBottom:10,borderRadius:40,backgroundColor:'rgb(242,243,245)',padding:4}}>
-                        <Image style={{width:40,height:40}} source={require('../assets/user.png')}/>
-                        <View>
-                            <Text style={{flex:1,color:'black',borderRadius:20,margin:4,padding:10}} >
-                                {"Hool" +
-                                ""}
 
-                            </Text>
-                        </View>
 
-                    </View>
-                </View> )
-
-}
 
 
 const Messenger = (props) => {
+    console.log(props.text)
     return (
         <View style={{flexDirection:'row',alignSelf:'flex-end'}}>
             <View  style={{flexDirection:'row',marginBottom:10,margin:6, borderRadius:40,backgroundColor:'rgb(242,243,245)',padding:4}}>
                 <Image style={{width:40,height:40}} source={require('../assets/user.png')}/>
                 <View>
                     <Text style={{flex:1,color:'black',borderRadius:20,margin:4,padding:10}} >
-                        {props.text}
+                        {props.text.user}
+                    </Text>
+                    <Text style={{flex:1,color:'black',borderRadius:20,margin:4,padding:10}} >
+                        {props.text.message}
                     </Text>
                 </View>
 
@@ -65,6 +55,8 @@ export function Chats () {
    const   [sender,setSender]=useState(user.getUserName().toString())
     let [messageStack,setMessageStack]=useState({ users:[]})
     const   [scrollToView,setScrollToView]=useState()
+    const [messageState,setMessageState]=useState((() => {}))
+    let [message,setMessage]=useState({})
     //appendedCompsCount: this.state.appendedCompsCount + 1
     let   [count,setCount]=useState(0)
 
@@ -72,7 +64,7 @@ export function Chats () {
 
 
         setMessageStack({
-            users: [...messageStack.users, <Messenger key={count} text={user.getUserText()}/>]
+            users: [...messageStack.users, <Messenger key={count} text={message}/>]
         })
        setCount(count+1);
 
@@ -139,19 +131,38 @@ export function Chats () {
                     onChangeText={(text =>  {
 
 
-                        user.setUserText(text)})}
+
+
+                        setMessageState(() =>{
+                            scrollRef.current?.scrollToEnd({
+                            x : 0,
+                            animated : true
+                        });
+
+                            setMessage(user.sendMessage(text))
+
+                            user.setUserText(text)
+
+
+                        })
+
+
+                    })}
 
                 />
             </View>
             <View style={{ flexDirection: "row" }}>
-                <TouchableOpacity onPress={((event) =>{
+                <TouchableOpacity onPress={(event =>{
                     AddUser()
-                    user.setUserText("")
+                    setMessageState(() =>{
+                        scrollRef.current?.scrollToEnd({
+                            x : 0,
+                            animated : true
+                        });
+                        setMessage(user.sendMessage(message.message))
+                        user.setUserText(message)
 
-                    scrollRef.current?.scrollToEnd({
-                        x : 0,
-                        animated : true
-                    });
+                    })
 
                 })}>
                     <Image name={'send'} style={{width:40,height:30}} source={require('../assets/send-512.webp')}/>
