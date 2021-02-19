@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
 
+<<<<<<< Updated upstream
 export default function Messages() {
   let placeholder = 'Enter youre message' + ':';
   return (
@@ -78,3 +79,16 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
 });
+=======
+export const Messages = () => {
+    const goToChat = () => {
+        Actions.Chats()
+    }
+    return (
+        <TouchableOpacity style = {{ margin: 128 }} onPress = {goToChat}>
+            <Text>This is Chat</Text>
+        </TouchableOpacity>
+    )
+}
+
+>>>>>>> Stashed changes

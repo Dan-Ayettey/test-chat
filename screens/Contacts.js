@@ -1,4 +1,10 @@
+<<<<<<< Updated upstream
 import React from "react";
+=======
+import React, {useEffect} from "react";
+import { Actions } from "react-native-router-flux";
+
+>>>>>>> Stashed changes
 import {
   SafeAreaView,
   View,
@@ -7,6 +13,10 @@ import {
   Text,
   TouchableOpacity,
 } from "react-native";
+<<<<<<< Updated upstream
+=======
+import {AddContactModal} from "./Model";
+>>>>>>> Stashed changes
 
 const DATA = [
   {
@@ -73,6 +83,7 @@ DATA.sort(function (a, b) {
   return 0;
 });
 
+<<<<<<< Updated upstream
 const Item = ({ user, msg, initials, time, type }) => (
   <TouchableOpacity activeOpacity={0.7} style={styles.item}>
     <View style={styles.initalsContainer}>
@@ -93,6 +104,37 @@ const Item = ({ user, msg, initials, time, type }) => (
     </View>
   </TouchableOpacity>
 );
+=======
+const Item = ({ user, msg, initials, time, type }) => {
+  const goToMessages = () => {
+    Actions.Chats();
+  };
+  return (
+    <TouchableOpacity
+      onPress={goToMessages}
+      activeOpacity={0.7}
+      style={styles.item}
+    >
+      <View style={styles.initalsContainer}>
+        <View style={styles.initialsCircle}>
+          <Text style={styles.initialsText}>{initials}</Text>
+        </View>
+      </View>
+
+      <View style={styles.contactContainer}>
+        <Text style={styles.user}>{user}</Text>
+        <Text style={styles.message}>{msg}</Text>
+      </View>
+
+      <View style={styles.timeContainer}>
+        <View>
+          <Text>{time}</Text>
+        </View>
+      </View>
+    </TouchableOpacity>
+  );
+};
+>>>>>>> Stashed changes
 
 const FlatListItemSeparator = () => {
   return (
@@ -106,7 +148,11 @@ const FlatListItemSeparator = () => {
   );
 };
 
+<<<<<<< Updated upstream
 export default function Contacts() {
+=======
+export function Contacts(props) {
+>>>>>>> Stashed changes
   const renderItem = ({ item }) => (
     <Item
       user={item.user}
@@ -134,6 +180,11 @@ export default function Contacts() {
         renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
       />
+
+      {
+
+       <AddContactModal isVisible={props.isVisible} />
+      }
     </SafeAreaView>
   );
 }
