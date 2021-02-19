@@ -1,5 +1,6 @@
 import { Actions } from "react-native-router-flux";
 import React, {useRef, useState} from "react";
+//imports
 import {
   StyleSheet,
   View,
