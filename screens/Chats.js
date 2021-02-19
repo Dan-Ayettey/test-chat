@@ -89,7 +89,10 @@ export function Chats () {
                 flexDirection: 'column',
                 justifyContent: 'flex-end'
 
-            }} style={{width:'100%'}} showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false} scrollsToTop={scrollToView}>
+            }} style={{width:'100%'}}
+                    showsHorizontalScrollIndicator={false}
+                    showsVerticalScrollIndicator={false}
+                    scrollsToTop={scrollToView} onContentSizeChange={scrollToView}>
             <View  />
             <View  />
             <View style={{flexDirection:'row',alignSelf:'flex-start'}}>
