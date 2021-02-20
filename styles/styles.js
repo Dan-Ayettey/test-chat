@@ -1,5 +1,16 @@
 import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "white",
+  },
+  messageContainer:{
+      flexDirection:'row',alignSelf:'flex-end',
+      justifyContent:'space-evenly',
+  },
+
   appBar: {
     backgroundColor: "#3484ff",
     paddingTop: 20,
@@ -125,6 +136,65 @@ export const styles = StyleSheet.create({
     },
     addToContactTitle:{
       color:'white'
+    },
+    messageContainerChild:{
+      flexDirection:'row',
+        marginBottom:10,
+        margin:6,
+        borderRadius:40,
+        backgroundColor:'rgb(242,243,245)',padding:4
+  },
+    messageContainerChildText: {
+      flex:1,color:'black',borderRadius:20,
+        margin:4,
+        padding:4
+    },
+    messageContainerChildTextMessage: {
+      flex:1,color:'black',
+        borderRadius:20,
+        width:220,
+        flexWrap:'wrap',
+        margin:4,padding:4
+    },
+    scrollContainer: {
+        flexGrow: 1,
+        flexDirection: 'column',
+        justifyContent: 'flex-end'
+
+    },
+    receiverContainer: {
+      flexDirection:'row',alignSelf:'flex-start',flexWrap:'wrap'
+    },
+    receiverContainerChild: {
+      flexDirection:'row',marginBottom:10,margin:6,
+        borderRadius:40,
+        backgroundColor:'rgb(242,243,245)',
+        padding:4,
+        flexWrap:'wrap'
+    },
+    receiverMessage: {
+      flex:1,color:'black',
+        borderRadius:20,margin:4,padding:10
+    },
+    chatInputContainer: {
+
+    borderTopColor:'rgb(238,239,239)',
+        borderTopWidth: 1,
+    paddingTop:2,
+
+    },
+    chatInputContainerChild: {
+
+    backgroundColor: "rgb(242,243,245)",
+        marginTop:4,
+    height: 50,
+    borderRadius: 100,
+    marginBottom: 20,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+
     }
+
 
 });

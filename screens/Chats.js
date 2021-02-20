@@ -9,16 +9,18 @@ import {
   ImageBackground,
   ScrollView,
     Image,
+    Alert,
     ImageComponent,
     Modal,
     SafeAreaView,
   TextInput, TouchableOpacity,
   KeyboardAvoidingView,
 } from "react-native";
+import Clipboard from '@react-native-community/clipboard';
 import {FontAwesome, MaterialCommunityIcons, MaterialIcons} from '@expo/vector-icons'
 import Icon from "react-native-vector-icons/FontAwesome5";
 import {User} from "../mediators/User";
-
+import {styles} from "../styles/styles"
 
 
 
@@ -26,18 +28,24 @@ import {User} from "../mediators/User";
 
 
 const Messenger = (props) => {
-    console.log(props.text)
+    const clipboardOptions=(text)=> {
+        Clipboard.setString('hlooo')
+    }
+    const fetchClipboardText=async ()=> {
+        return  await Clipboard.getString()
+    }
+
+    const [text,setText]=useState({date:'',message:''})
+    const [isEnable,setIsEnable]=useState(false)
+
     return (
-        <View style={{flexDirection:'row',alignSelf:'flex-end'}}>
-            <View  style={{flexDirection:'row',marginBottom:10,margin:6, borderRadius:40,backgroundColor:'rgb(242,243,245)',padding:4}}>
+        <View style={styles.messageContainer}>
+            <View  style={styles.messageContainerChild} >
                 <Image style={{width:40,height:40}} source={require('../assets/user.png')}/>
-                <View>
-                    <Text style={{flex:1,color:'black',borderRadius:20,margin:4,padding:10}} >
-                        {props.text.user}
-                    </Text>
-                    <Text style={{flex:1,color:'black',borderRadius:20,margin:4,padding:10}} >
-                        {props.text.message}
-                    </Text>
+                <View >
+                        <Text selectable style={styles.messageContainerChildTextMessage}  >
+                            {props.text.user+'\n'+ props.text.message}
+                        </Text>
                 </View>
 
             </View>
@@ -48,7 +56,7 @@ export function Chats () {
   const goToHome = () => {
     Actions.Chat();
   };
-  const user=new User("Dan Ayettey");
+  const user=new User(` ${new Date().toLocaleDateString()}  ${new Date().toLocaleTimeString()}`);
 
  const [receiver,setReceiver]=useState(user.getUserName().toString())
 
@@ -57,7 +65,8 @@ export function Chats () {
     let [messageStack,setMessageStack]=useState({ users:[]})
     const   [scrollToView,setScrollToView]=useState()
     const [messageState,setMessageState]=useState((() => {}))
-    let [message,setMessage]=useState({})
+    const [message,setMessage]=useState({})
+    let [editorValue,setEditorValue]=useState('')
     //appendedCompsCount: this.state.appendedCompsCount + 1
     let   [count,setCount]=useState(0)
 
@@ -77,22 +86,17 @@ export function Chats () {
     return (
     <View style={styles.container}>
         <ScrollView ref={scrollRef}
-            contentContainerStyle={{
-                flexGrow: 1,
-                flexDirection: 'column',
-                justifyContent: 'flex-end'
-
-            }} style={{width:'100%'}}
+            contentContainerStyle={styles.scrollContainer} style={{width:'100%'}}
                     showsHorizontalScrollIndicator={false}
                     showsVerticalScrollIndicator={false}
                     scrollsToTop={scrollToView} onContentSizeChange={scrollToView}>
             <View  />
             <View  />
-            <View style={{flexDirection:'row',alignSelf:'flex-start'}}>
-            <View  style={{flexDirection:'row',marginBottom:10,margin:6, borderRadius:40,backgroundColor:'rgb(242,243,245)',padding:4}}>
+            <View style={styles.receiverContainer}>
+            <View  style={styles.receiverContainerChild}>
                 <Image style={{width:40,height:40}} source={require('../assets/user.png')}/>
                 <View>
-                    <Text style={{flex:1,color:'black',borderRadius:20,margin:4,padding:10}} >
+                    <Text style={styles.receiverMessage} >
                         {user.sendMessage("Hej Johan").message}
                     </Text>
                 </View>
@@ -103,23 +107,10 @@ export function Chats () {
             {messageStack.users}
 
         </ScrollView>
-        <View  style={{
-            borderTopColor:'rgb(238,239,239)',
-            borderTopWidth: 1,
-            paddingTop:2,
-    }}>
+        <View  style={styles.chatInputContainer}>
 
         <View
-            style={{
-                backgroundColor: "rgb(242,243,245)",
-                marginTop:4,
-                height: 50,
-                borderRadius: 100,
-                marginBottom: 20,
-                flexDirection: "row",
-                justifyContent: "space-between",
-                alignItems: "center",
-            }}
+            style={styles.chatInputContainerChild}
         >
             <View style={{ flexDirection: "row" }}>
                 <TouchableOpacity>
@@ -130,27 +121,18 @@ export function Chats () {
                     placeholderTextColor='black'
                     placeholder={placeholder}
                     onChangeText={(text =>  {
-
-
-
-
                         setMessageState(() =>{
                             scrollRef.current?.scrollToEnd({
                             x : 0,
                             animated : true
                         });
-
                             setMessage(user.sendMessage(text))
-
                             user.setUserText(text)
-
-
                         })
 
-
+                        setEditorValue(text)
                     })}
-
-                />
+                value={editorValue}/>
             </View>
             <View style={{ flexDirection: "row" }}>
                 <TouchableOpacity onPress={(event =>{
@@ -165,6 +147,17 @@ export function Chats () {
 
                     })
 
+                    setTimeout(()=>{
+
+                            scrollRef.current?.scrollToEnd({
+                                x : 0,
+                                animated : true
+                            });
+                        clearInterval(this)
+                    },50)
+
+                    setEditorValue('')
+
                 })}>
                     <Image name={'send'} style={{width:40,height:30}} source={require('../assets/send-512.webp')}/>
                 </TouchableOpacity>
@@ -174,16 +167,8 @@ export function Chats () {
     </View>
 
     </View>
-  );
+);
 }
 
 
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "white",
-  },
-});
