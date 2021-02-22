@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de6e8c88-4187-494b-81b7-812c11552d2a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mediators/ChatRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/mediators/ChatRoom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mediators/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/mediators/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/navigation.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/Chats.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Chats.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/styles/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/yarn-error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +35,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
@@ -60,7 +56,7 @@
       <recent name="C:\Users\ictte\Desktop\test-chat3\screens" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.web">
+  <component name="RunManager" selected="npm.android">
     <configuration name="android" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -83,8 +79,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.web" />
         <item itemvalue="npm.android" />
+        <item itemvalue="npm.web" />
       </list>
     </recent_temporary>
   </component>
@@ -112,22 +108,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1613724448648" />
-    <state width="1491" height="206" key="GridCell.Tab.0.bottom" timestamp="1613857138370">
+    <state width="1491" height="206" key="GridCell.Tab.0.bottom" timestamp="1613980874092">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="206" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613857138370" />
-    <state width="1491" height="206" key="GridCell.Tab.0.center" timestamp="1613857138369">
+    <state width="1491" height="206" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613980874092" />
+    <state width="1491" height="206" key="GridCell.Tab.0.center" timestamp="1613980874092">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="206" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613857138369" />
-    <state width="1491" height="206" key="GridCell.Tab.0.left" timestamp="1613857138369">
+    <state width="1491" height="206" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613980874092" />
+    <state width="1491" height="206" key="GridCell.Tab.0.left" timestamp="1613980874092">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="206" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613857138369" />
-    <state width="1491" height="206" key="GridCell.Tab.0.right" timestamp="1613857138370">
+    <state width="1491" height="206" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613980874092" />
+    <state width="1491" height="206" key="GridCell.Tab.0.right" timestamp="1613980874092">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="206" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613857138370" />
+    <state width="1491" height="206" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613980874092" />
     <state x="425" y="189" key="run.anything.popup" timestamp="1613686772746">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

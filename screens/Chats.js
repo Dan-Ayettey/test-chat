@@ -16,7 +16,7 @@ import {
   TextInput, TouchableOpacity,
   KeyboardAvoidingView,
 } from "react-native";
-import Clipboard from '@react-native-community/clipboard';
+import Clipboard, {useClipboard} from '@react-native-community/clipboard';
 import {FontAwesome, MaterialCommunityIcons, MaterialIcons} from '@expo/vector-icons'
 import Icon from "react-native-vector-icons/FontAwesome5";
 import {User} from "../mediators/User";
@@ -35,20 +35,45 @@ const Messenger = (props) => {
         return  await Clipboard.getString()
     }
 
-    const [text,setText]=useState({date:'',message:''})
+    const [isAllSelected,setIsAllTextSelected]=useState(false)
+    const setSelectTextFocus=useRef()
     const [isEnable,setIsEnable]=useState(false)
+    const [isClipboard,setIsClipboard]=useState(false)
 
     return (
+        <View>
+            {isClipboard ?<View  style={{flexDirection:'row',width:160,marginLeft:80,marginRight:30,padding:6,borderRadius:20,
+                backgroundColor:styles.messageContainerChild.backgroundColor,justifyContent:'space-evenly'}}>
+               <TouchableOpacity>
+                   <Text onPress={()=>{
+                       setIsClipboard(false)
+                   }}>Copy</Text>
+               </TouchableOpacity>
+                <TouchableOpacity>
+                    <Text onPress={()=>{
+                       setTextSeclect({backgroundColor:'red'})
+                    }}>Select all</Text>
+                </TouchableOpacity>
+            </View> :null}
         <View style={styles.messageContainer}>
             <View  style={styles.messageContainerChild} >
                 <Image style={{width:40,height:40}} source={require('../assets/user.png')}/>
-                <View >
-                        <Text selectable style={styles.messageContainerChildTextMessage}  >
+                <TouchableOpacity activeOpacity={.6} onLongPress={()=>{
+                     if(isClipboard){
+                         setIsClipboard(false)
+                     }else {
+                         setIsClipboard(true)
+                     }
+                }}>
+                        <Text ref={setSelectTextFocus}  selectable style={styles.messageContainerChildTextMessage}  >
                             {props.text.user+'\n'+ props.text.message}
                         </Text>
-                </View>
+                </TouchableOpacity>
 
             </View>
+
+        </View>
+
         </View>
     )
 }
@@ -114,7 +139,7 @@ export function Chats () {
         >
             <View style={{ flexDirection: "row" }}>
                 <TouchableOpacity>
-                    <MaterialCommunityIcons name={'user'} size={40}/>
+                    <MaterialCommunityIcons name={'bars'} size={40}/>
                 </TouchableOpacity>
                 <TextInput
                     style={{ marginLeft: 10 ,width:260,padding:4 }}
