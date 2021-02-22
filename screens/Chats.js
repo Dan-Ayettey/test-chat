@@ -35,7 +35,7 @@ const Messenger = (props) => {
         return  await Clipboard.getString()
     }
 
-    const [isAllSelected,setIsAllTextSelected]=useState(false)
+    const [isSelectAll,setIsSelectAll]=useState(false)
     const setSelectTextFocus=useRef()
     const [isEnable,setIsEnable]=useState(false)
     const [isClipboard,setIsClipboard]=useState(false)
@@ -51,21 +51,25 @@ const Messenger = (props) => {
                </TouchableOpacity>
                 <TouchableOpacity>
                     <Text onPress={()=>{
-                       setTextSeclect({backgroundColor:'red'})
+                       setIsSelectAll(true)
                     }}>Select all</Text>
                 </TouchableOpacity>
             </View> :null}
         <View style={styles.messageContainer}>
             <View  style={styles.messageContainerChild} >
                 <Image style={{width:40,height:40}} source={require('../assets/user.png')}/>
-                <TouchableOpacity activeOpacity={.6} onLongPress={()=>{
+                <TouchableOpacity   activeOpacity={.6} onLongPress={()=>{
                      if(isClipboard){
                          setIsClipboard(false)
                      }else {
                          setIsClipboard(true)
                      }
-                }}>
-                        <Text ref={setSelectTextFocus}  selectable style={styles.messageContainerChildTextMessage}  >
+                }}   style={isSelectAll ?[{backgroundColor:styles.appBar.backgroundColor,borderRadius:4},{borderRadius:4,color:'white'}]
+                    :null}>
+                        <Text ref={setSelectTextFocus}  selectable
+                              style={isSelectAll ?[{backgroundColor:styles.appBar.backgroundColor,borderRadius:4},styles.messageContainerChildTextMessage,
+                                      {borderRadius:4,color:'white'}]
+                                  :styles.messageContainerChildTextMessage}>
                             {props.text.user+'\n'+ props.text.message}
                         </Text>
                 </TouchableOpacity>
