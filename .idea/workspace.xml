@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de6e8c88-4187-494b-81b7-812c11552d2a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/clientRDM/Chat.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientRDM/Chat.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/clientRDM/Message.js" beforeDir="false" afterPath="$PROJECT_DIR$/clientRDM/Message.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientRDM/Patient.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Chats.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Chats.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientRDM/Patient.js" beforeDir="false" afterPath="$PROJECT_DIR$/clientRDM/Patient.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +129,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1491" height="166" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614072941566" />
+    <state x="360" y="144" key="Vcs.Push.Dialog.v2" timestamp="1614073559799">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="360" y="144" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1614073559799" />
     <state x="478" y="0" width="579" height="824" key="find.popup" timestamp="1614068133223">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
