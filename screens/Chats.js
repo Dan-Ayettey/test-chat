@@ -2,23 +2,16 @@ import { Actions } from "react-native-router-flux";
 import React, {useRef, useState} from "react";
 //imports
 import {
-  StyleSheet,
   View,
   Text,
-    VirtualizedList,
-  ImageBackground,
   ScrollView,
     Image,
-    Alert,
-    ImageComponent,
-    Modal,
-    SafeAreaView,
   TextInput, TouchableOpacity,
-  KeyboardAvoidingView,
 } from "react-native";
+
+import {ChatDB} from '../clientRDM/Chat'
 import Clipboard, {useClipboard} from '@react-native-community/clipboard';
-import {FontAwesome, MaterialCommunityIcons, MaterialIcons} from '@expo/vector-icons'
-import Icon from "react-native-vector-icons/FontAwesome5";
+import {MaterialCommunityIcons} from '@expo/vector-icons'
 import {User} from "../mediators/User";
 import {styles} from "../styles/styles"
 
@@ -26,8 +19,11 @@ import {styles} from "../styles/styles"
 
 
 
-
+const messenger=ChatDB.filter((message)=>message.text !==undefined)
 const Messenger = (props) => {
+
+
+
     const clipboardOptions=(text)=> {
         Clipboard.setString('hlooo')
     }
@@ -64,11 +60,9 @@ const Messenger = (props) => {
                      }else {
                          setIsClipboard(true)
                      }
-                }}   style={isSelectAll ?[{backgroundColor:styles.appBar.backgroundColor,borderRadius:4},{borderRadius:4,color:'white'}]
-                    :null}>
+                }}>
                         <Text ref={setSelectTextFocus}  selectable
-                              style={isSelectAll ?[{backgroundColor:styles.appBar.backgroundColor,borderRadius:4},styles.messageContainerChildTextMessage,
-                                      {borderRadius:4,color:'white'}]
+                              style={isSelectAll ?[{color:styles.appBar.backgroundColor,borderRadius:4},styles.messageContainerChildTextMessage]
                                   :styles.messageContainerChildTextMessage}>
                             {props.text.user+'\n'+ props.text.message}
                         </Text>
@@ -81,10 +75,13 @@ const Messenger = (props) => {
         </View>
     )
 }
+
 export function Chats () {
   const goToHome = () => {
     Actions.Chat();
   };
+
+
   const user=new User(` ${new Date().toLocaleDateString()}  ${new Date().toLocaleTimeString()}`);
 
  const [receiver,setReceiver]=useState(user.getUserName().toString())
@@ -99,7 +96,7 @@ export function Chats () {
     //appendedCompsCount: this.state.appendedCompsCount + 1
     let   [count,setCount]=useState(0)
 
-   const AddUser = () => {
+   const AddChat = () => {
 
 
         setMessageStack({
@@ -109,7 +106,17 @@ export function Chats () {
 
     }
 
-  let placeholder = "Enter  message" + ":";
+
+
+
+
+    /*
+      value.text && value.senderUserId ?
+            setMessageStack({
+                users: [...messageStack.users, <Messenger key={index} text={user.sendMessage(user.messages.text)}/>]
+            }):null
+     */
+    let placeholder = "Enter  message" + ":";
     const scrollRef = useRef();
 
     return (
@@ -165,28 +172,49 @@ export function Chats () {
             </View>
             <View style={{ flexDirection: "row" }}>
                 <TouchableOpacity onPress={(event =>{
-                    AddUser()
+                    setMessage(user.sendMessage(message))
+
+                    console.log(message)
+                    /*
+                    if(message.message===undefined || message.message===''){
+                        console.log("Hold")
+                        setMessageState(() =>{
+                            scrollRef.current?.scrollToEnd({
+                                x : 0,
+                                animated : true
+                            });
+
+                            setMessage( user.sendMessage(''))
+                            user.setUserText('')
+
+                        })
+
+                    }else
+
                     setMessageState(() =>{
                         scrollRef.current?.scrollToEnd({
                             x : 0,
                             animated : true
                         });
-                        setMessage(user.sendMessage(message.message))
+                        setMessage( user.sendMessage(message.message))
                         user.setUserText(message)
 
                     })
 
+                    messenger.push( user.sendMessage(message.message))
+                    setEditorValue('')
+                    AddChat()
                     setTimeout(()=>{
 
-                            scrollRef.current?.scrollToEnd({
-                                x : 0,
-                                animated : true
-                            });
+                        scrollRef.current?.scrollToEnd({
+                            x : 0,
+                            animated : true
+                        });
                         clearInterval(this)
                     },50)
 
-                    setEditorValue('')
-
+                    console.log('',message.message,'')
+                    */
                 })}>
                     <Image name={'send'} style={{width:40,height:30}} source={require('../assets/send-512.webp')}/>
                 </TouchableOpacity>

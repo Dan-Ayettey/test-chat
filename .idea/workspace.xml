@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de6e8c88-4187-494b-81b7-812c11552d2a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/clientRDM/Chat.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientRDM/Chat.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientRDM/Message.js" beforeDir="false" afterPath="$PROJECT_DIR$/clientRDM/Message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientRDM/Patient.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/screens/Chats.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Chats.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -12,6 +17,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -105,25 +117,33 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1613724448648" />
-    <state width="1491" height="206" key="GridCell.Tab.0.bottom" timestamp="1613985919246">
+    <state width="1491" height="166" key="GridCell.Tab.0.bottom" timestamp="1614072941567">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="206" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613985919246" />
-    <state width="1491" height="206" key="GridCell.Tab.0.center" timestamp="1613985919245">
+    <state width="1491" height="166" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1614072941567" />
+    <state width="1491" height="166" key="GridCell.Tab.0.center" timestamp="1614072941566">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="206" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613985919245" />
-    <state width="1491" height="206" key="GridCell.Tab.0.left" timestamp="1613985919245">
+    <state width="1491" height="166" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1614072941566" />
+    <state width="1491" height="166" key="GridCell.Tab.0.left" timestamp="1614072941566">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="206" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613985919245" />
-    <state width="1491" height="206" key="GridCell.Tab.0.right" timestamp="1613985919246">
+    <state width="1491" height="166" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1614072941566" />
+    <state width="1491" height="166" key="GridCell.Tab.0.right" timestamp="1614072941566">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="206" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613985919246" />
+    <state width="1491" height="166" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1614072941566" />
+    <state x="478" y="0" width="579" height="824" key="find.popup" timestamp="1614068133223">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="478" y="0" width="579" height="824" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1614068133223" />
     <state x="425" y="189" key="run.anything.popup" timestamp="1613686772746">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="189" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1613686772746" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1614070925107">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1614070925107" />
   </component>
 </project>
